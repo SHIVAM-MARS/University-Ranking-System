@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Ranking System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>University/Institute Ranking System</h1>
+    </header>
+    <main>
+        <section id="input-section">
+            <h2>Enter Institute Data</h2>
+            <form id="ranking-form">
+                <div class="form-group">
+                    <label for="institute-name">Institute Name:</label>
+                    <input type="text" id="institute-name" name="instituteName" required>
+                </div>
+                <div class="form-group">
+                    <label for="teaching-learning-resources">Teaching & Learning Resources:</label>
+                    <input type="number" id="teaching-learning-resources" name="teachingLearningResources" required>
+                </div>
+                <div class="form-group">
+                    <label for="research-professional-practice">Research & Professional Practice:</label>
+                    <input type="number" id="research-professional-practice" name="researchProfessionalPractice" required>
+                </div>
+                <div class="form-group">
+                    <label for="placement-record">Placement Record:</label>
+                    <input type="number" id="placement-record" name="placementRecord" required>
+                </div>
+                <div class="form-group">
+                    <label for="outreach-inclusivity">Outreach & Inclusivity:</label>
+                    <input type="number" id="outreach-inclusivity" name="outreachInclusivity" required>
+                </div>
+                <div class="form-group">
+                    <label for="perception">Perception:</label>
+                    <input type="number" id="perception" name="perception" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="ranking-section">
+            <h2>Institute Rankings</h2>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Institute Name</th>
+                        <th>Teaching & Learning Resources</th>
+                        <th>Research & Professional Practice</th>
+                        <th>Placement Record</th>
+                        <th>Outreach & Inclusivity</th>
+                        <th>Perception</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
